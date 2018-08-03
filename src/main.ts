@@ -12,16 +12,14 @@ app.on('ready', () => {
     width: 1000
   })
 
-  browserWindow.loadURL('https://secure.qut.edu.au/login/')
+  browserWindow.loadURL('https://qutvirtual4.qut.edu.au/group/student/calendar')
 
   browserWindow.webContents.on('did-finish-load', () => {
     if (
-      browserWindow.webContents.getURL() ===
-      'https://qutvirtual4.qut.edu.au/group/student/home'
+      browserWindow.webContents
+        .getURL()
+        .includes('https://qutvirtual4.qut.edu.au/group/student/calendar')
     ) {
-      browserWindow.loadURL(
-        'https://qutvirtual4.qut.edu.au/group/student/calendar'
-      )
       browserWindow.webContents.executeJavaScript(`
         $('body')
         .children()
