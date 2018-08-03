@@ -1,0 +1,14 @@
+{
+  "name": "QUT-Calendar",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Quintisimo",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron src/main.js"
+  },
+  "dependencies": {
+    "electron": "^2.0.6"
+  },
+  "devDependencies": {}
+}
